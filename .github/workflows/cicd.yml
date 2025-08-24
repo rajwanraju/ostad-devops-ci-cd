@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for Node.js App Development By:Rajwan
+name: CI/CD Pipeline for Node.js App-Rajwan
 
 on:
   push:
@@ -61,4 +61,5 @@ jobs:
           pm2 stop node-express-app || true
           pm2 start npm --name "node-express-app" -- run start
         env:
+          PORT: 3000
           NODE_ENV: production
