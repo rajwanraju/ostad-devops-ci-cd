@@ -34,7 +34,7 @@ jobs:
 
   deploy:
     needs: test
-    runs-on: [self-hosted, node-express-app]
+    runs-on: [self-hosted, clear]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -58,8 +58,8 @@ jobs:
 
       - name: Deploy application
         run: |
-          pm2 stop node-express-app || true
-          pm2 start npm --name "node-express-app" -- run start
+          pm2 stop clear || true
+          pm2 start npm --name "clear" -- run start
         env:
           PORT: 3000
           NODE_ENV: production
