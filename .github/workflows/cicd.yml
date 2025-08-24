@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for Node.js App-Rajwan
+name: CI/CD Pipeline for Node.js App Development By:Rajwan
 
 on:
   push:
